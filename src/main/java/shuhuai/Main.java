@@ -27,6 +27,8 @@ public class Main {
                      InvocationTargetException |
                      NoSuchMethodException e) {
                 System.out.println("输入有误");
+                System.out.println("请输入题号：");
+                input = scanner.nextLine();
             }
         }
     }
