@@ -4,21 +4,20 @@ import java.util.*;
 
 public class Solution {
     public int majorityElementMap(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int elem : nums) {
-            if (map.containsKey(elem)) {
-                map.put(elem, map.get(elem) + 1);
+        Map<Integer, Integer> counter = new HashMap<>();
+        for (int num : nums) {
+            if (counter.containsKey(num)) {
+                counter.put(num, counter.get(num) + 1);
             } else {
-                map.put(elem, 1);
+                counter.put(num, 1);
             }
         }
-        Map.Entry<Integer, Integer> max = new AbstractMap.SimpleEntry<>(Integer.MIN_VALUE, Integer.MIN_VALUE);
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > max.getValue()) {
-                max = entry;
+        for (Map.Entry<Integer, Integer> entry : counter.entrySet()) {
+            if (entry.getValue() > nums.length / 2) {
+                return entry.getKey();
             }
         }
-        return max.getKey();
+        return 0;
     }
 
     public int majorityElementSort(int[] nums) {
@@ -28,30 +27,20 @@ public class Solution {
 
     public int majorityElementRandom(int[] nums) {
         Random random = new Random();
-        int majorityCount = nums.length / 2;
-        while (true) {
-            int candidate = nums[random.nextInt(nums.length)];
-            int count = 0;
+        int count = 0;
+        int candidate = 0;
+        while (count <= nums.length / 2) {
+            count = 0;
+            candidate = nums[random.nextInt(nums.length)];
             for (int num : nums) {
                 if (num == candidate) {
                     count++;
                 }
             }
-            if (count > majorityCount) {
-                return candidate;
-            }
         }
+        return candidate;
     }
 
-    private int countInRange(int[] nums, int num, int lo, int hi) {
-        int count = 0;
-        for (int i = lo; i <= hi; i++) {
-            if (nums[i] == num) {
-                count++;
-            }
-        }
-        return count;
-    }
 
     public int majorityElementRecursive(int[] nums, int low, int high) {
         if (low == high) {
