@@ -1,20 +1,22 @@
 package shuhuai.leetcode.problems.t14;
 
 public class Solution {
-    protected String getPrefix(String str1, String str2) {
-        int length = Math.min(str1.length(), str2.length());
-        int max = 0;
-        while (max < length && str1.charAt(max) == str2.charAt(max)) {
-            max++;
-        }
-        return str1.substring(0, max);
-    }
-
     public String longestCommonPrefix(String[] strs) {
-        String result = strs[0];
-        for (String str : strs) {
-            result = getPrefix(result, str);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < strs[0].length(); i++) {
+            boolean good = true;
+            for (String str : strs) {
+                if (i >= str.length() || str.charAt(i) != strs[0].charAt(i)) {
+                    good = false;
+                    break;
+                }
+            }
+            if (good) {
+                stringBuilder.append(strs[0].charAt(i));
+            } else {
+                break;
+            }
         }
-        return result;
+        return stringBuilder.toString();
     }
 }

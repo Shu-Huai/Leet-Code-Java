@@ -5,13 +5,12 @@ public class Solution {
         boolean begin = false;
         int result = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
-            if (s.charAt(i) != ' ' && !begin) {
+            if (s.charAt(i) == ' ' && begin) {
+                break;
+            }
+            if (s.charAt(i) != ' ') {
                 begin = true;
                 result++;
-            } else if (s.charAt(i) != ' ' && begin) {
-                result++;
-            } else if (s.charAt(i) == ' ' && begin) {
-                break;
             }
         }
         return result;
