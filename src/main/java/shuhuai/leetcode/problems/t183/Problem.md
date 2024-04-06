@@ -45,8 +45,6 @@ SQL架构
 
 ---
 
-
-
 ```MySQL
 # Write your MySQL query statement below
 ```

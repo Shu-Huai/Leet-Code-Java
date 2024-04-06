@@ -4,9 +4,7 @@ import org.junit.Test;
 import shuhuai.leetcode.entity.IO;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.assertArrayEquals;
 

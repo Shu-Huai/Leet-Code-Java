@@ -1,6 +1,9 @@
 package shuhuai.leetcode.problems.t169;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
 public class Solution {
     public int majorityElementMap(int[] nums) {

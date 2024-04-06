@@ -3,7 +3,7 @@ package shuhuai.leetcode.problems.t13;
 import java.util.Scanner;
 
 public class Test {
-    public void test(){
+    public void test() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         while (!input.isEmpty()) {

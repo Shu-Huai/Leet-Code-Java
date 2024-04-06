@@ -3,6 +3,12 @@ package shuhuai.leetcode.problems.t66;
 import java.util.Arrays;
 
 public class Solution {
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{1, 2, 3})));
+        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{9, 9, 9})));
+        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{0})));
+    }
+
     public int[] plusOne(int[] digits, int length) {
         if (length == 0) {
             int[] result = new int[digits.length + 1];
@@ -20,11 +26,5 @@ public class Solution {
 
     public int[] plusOne(int[] digits) {
         return plusOne(digits, digits.length);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{1, 2, 3})));
-        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{9, 9, 9})));
-        System.out.println(Arrays.toString(new Solution().plusOne(new int[]{0})));
     }
 }

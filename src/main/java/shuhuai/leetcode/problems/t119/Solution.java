@@ -6,7 +6,7 @@ import java.util.List;
 public class Solution {
     public List<Integer> getRow(int rowIndex) {
         List<List<Integer>> result = new ArrayList<>();
-        for (int i = 0; i < rowIndex+1; i++) {
+        for (int i = 0; i < rowIndex + 1; i++) {
             List<Integer> cur = new ArrayList<>();
             if (i == 0) {
                 cur.add(1);

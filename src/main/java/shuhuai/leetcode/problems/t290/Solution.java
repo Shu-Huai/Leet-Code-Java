@@ -2,7 +2,6 @@ package shuhuai.leetcode.problems.t290;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class Solution {
     public boolean wordPattern(String pattern, String s) {

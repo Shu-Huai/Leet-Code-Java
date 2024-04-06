@@ -6,7 +6,7 @@
 
 SQL架构
 
-表: `Person`
+表:`Person`
 
 ```
 +-------------+---------+
@@ -48,8 +48,6 @@ Person 表:
 ```
 
 ---
-
-
 
 ```MySQL
 # Please write a DELETE statement and DO NOT write a SELECT statement.

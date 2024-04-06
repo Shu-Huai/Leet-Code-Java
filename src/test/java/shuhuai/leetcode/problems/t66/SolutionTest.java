@@ -13,7 +13,7 @@ public class SolutionTest {
     public void plusOneTest() {
         List<IO<int[], int[]>> testList = new ArrayList<>();
         testList.add(new IO<>(new int[]{1, 2, 3}, new int[]{1, 2, 4}));
-        testList.add(new IO<>(new int[]{4,3,2,1}, new int[]{4,3,2,2}));
+        testList.add(new IO<>(new int[]{4, 3, 2, 1}, new int[]{4, 3, 2, 2}));
         testList.add(new IO<>(new int[]{0}, new int[]{1}));
         Solution solution = new Solution();
         for (IO<int[], int[]> io : testList) {

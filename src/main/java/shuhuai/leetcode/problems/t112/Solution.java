@@ -5,7 +5,7 @@ public class Solution {
         if (root == null) {
             return false;
         }
-        if (root.val == targetSum && root.left==null && root.right==null) {
+        if (root.val == targetSum && root.left == null && root.right == null) {
             return true;
         }
         if (root.left == null && root.right == null) {

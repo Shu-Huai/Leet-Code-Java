@@ -6,7 +6,7 @@
 
 SQL架构
 
-表： `Weather`
+表：`Weather`
 
 ```
 +---------------+---------+
@@ -52,8 +52,6 @@ Weather 表：
 ```
 
 ---
-
-
 
 ```MySQL
 # Write your MySQL query statement below

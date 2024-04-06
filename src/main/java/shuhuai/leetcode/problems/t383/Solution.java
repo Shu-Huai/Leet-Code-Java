@@ -11,7 +11,7 @@ public class Solution {
         }
         for (char c : ransomNote.toCharArray()) {
             count[c - 'a']--;
-            if(count[c - 'a'] < 0) {
+            if (count[c - 'a'] < 0) {
                 return false;
             }
         }

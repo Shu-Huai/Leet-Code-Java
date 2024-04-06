@@ -15,11 +15,11 @@ public class Solution {
         return true;
     }
 
-    public boolean isPowerOfFourBin(int n){
+    public boolean isPowerOfFourBin(int n) {
         return n > 0 && (n & (n - 1)) == 0 && (n & 0xaaaaaaaa) == 0;
     }
 
-    public boolean isPowerOfFourMod(int n){
+    public boolean isPowerOfFourMod(int n) {
         return (n & (n - 1)) == 0 && n % 3 == 1;
     }
 }

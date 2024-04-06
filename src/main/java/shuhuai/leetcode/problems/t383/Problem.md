@@ -33,12 +33,10 @@
 
 **提示：**
 
-*   `1 <= ransomNote.length, magazine.length <= 10^5`
-*   `ransomNote` 和 `magazine` 由小写英文字母组成
+* `1 <= ransomNote.length, magazine.length <= 10^5`
+* `ransomNote` 和 `magazine` 由小写英文字母组成
 
 ---
-
-
 
 ```Java
 class Solution {

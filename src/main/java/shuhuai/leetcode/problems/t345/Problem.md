@@ -24,12 +24,10 @@
 
 **提示：**
 
-*   `1 <= s.length <= 3 * 10^5`
-*   `s` 由  **可打印的 ASCII**  字符组成
+* `1 <= s.length <= 3 * 10^5`
+* `s` 由  **可打印的 ASCII**  字符组成
 
 ---
-
-
 
 ```Java
 class Solution {

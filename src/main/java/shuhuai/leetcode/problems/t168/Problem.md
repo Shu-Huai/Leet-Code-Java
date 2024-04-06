@@ -4,7 +4,7 @@
 
 ---
 
-给你一个整数 `columnNumber` ，返回它在 Excel 表中相对应的列名称。
+给你一个整数`columnNumber` ，返回它在 Excel 表中相对应的列名称。
 
 例如：
 
@@ -49,11 +49,9 @@ AB -> 28
 
 **提示：**
 
-*   `1 <= columnNumber <= 2^31 - 1`
+* `1 <= columnNumber <= 2^31 - 1`
 
 ---
-
-
 
 ```Java
 class Solution {

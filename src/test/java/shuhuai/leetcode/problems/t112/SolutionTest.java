@@ -2,10 +2,11 @@ package shuhuai.leetcode.problems.t112;
 
 import org.junit.Test;
 import shuhuai.leetcode.entity.IO;
-import shuhuai.leetcode.problems.t112.Solution;
-import shuhuai.leetcode.problems.t112.TreeNode;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 

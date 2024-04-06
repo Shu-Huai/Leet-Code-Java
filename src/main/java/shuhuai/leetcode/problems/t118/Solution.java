@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+    public static void main(String[] args) {
+        new Solution().generate(5);
+    }
+
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {
@@ -30,9 +34,5 @@ public class Solution {
             result.add(cur);
         }
         return result;
-    }
-
-    public static void main(String[] args) {
-        new Solution().generate(5);
     }
 }
