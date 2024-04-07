@@ -2,17 +2,19 @@ package shuhuai.leetcode.problems.t392;
 
 public class Solution {
     public boolean isSubsequenceSimple(String s, String t) {
-        if (s.length() == 0) {
+        if (s.isEmpty()) {
             return true;
         }
+        int i = 0;
         int j = 0;
-        for (int i = 0; i < t.length(); i++) {
-            if (t.charAt(i) == s.charAt(j)) {
-                j++;
-                if (j == s.length()) {
+        while (j != t.length()) {
+            if (s.charAt(i) == t.charAt(j)) {
+                i++;
+                if (i == s.length()) {
                     return true;
                 }
             }
+            j++;
         }
         return false;
     }
