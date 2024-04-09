@@ -1,33 +1,18 @@
 package shuhuai.leetcode.problems.t242;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Solution {
     public boolean isAnagramMap(String s, String t) {
-        if (s.length() != t.length()) {
-            return false;
+        int[] counter = new int[26];
+        for (char c : s.toCharArray()) {
+            counter[c - 'a']++;
         }
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < s.length(); i++) {
-            char cur = s.charAt(i);
-            if (map.containsKey(cur)) {
-                map.put(cur, map.get(cur) + 1);
-            } else {
-                map.put(cur, 1);
-            }
+        for (char c : t.toCharArray()) {
+            counter[c - 'a']--;
         }
-        for (int i = 0; i < t.length(); i++) {
-            char cur = t.charAt(i);
-            if (map.containsKey(cur)) {
-                map.put(cur, map.get(cur) - 1);
-            } else {
-                return false;
-            }
-        }
-        for (Map.Entry<Character, Integer> elem : map.entrySet()) {
-            if (elem.getValue() != 0) {
+        for (int i = 0; i < 26; i++) {
+            if (counter[i] != 0) {
                 return false;
             }
         }

@@ -1,5 +1,6 @@
 package shuhuai.leetcode.problems.t27;
 
+import shuhuai.leetcode.utils.Inputer;
 import shuhuai.leetcode.utils.Printer;
 
 import java.util.Arrays;
@@ -10,11 +11,7 @@ public class Test {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
         while (!input.isEmpty()) {
-            String[] arr = input.split(" ");
-            int[] nums = new int[arr.length];
-            for (int j = 0; j < nums.length; j++) {
-                nums[j] = Integer.parseInt(arr[j]);
-            }
+            int[] nums = new Inputer().stringToIntArray(input);
             int val = scanner.nextInt();
             int j = new Solution().removeElement(nums, val);
             System.out.println(j);
