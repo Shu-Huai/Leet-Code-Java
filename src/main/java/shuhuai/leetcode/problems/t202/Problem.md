@@ -39,11 +39,5 @@
 
 ---
 
-```C++
-class Solution {
-public:
-    bool isHappy(int n) {
-
-    }
-};
+```Java
 ```
