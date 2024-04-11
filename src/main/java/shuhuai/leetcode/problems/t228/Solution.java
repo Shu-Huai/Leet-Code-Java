@@ -6,20 +6,21 @@ import java.util.List;
 public class Solution {
     public List<String> summaryRanges(int[] nums) {
         List<String> result = new ArrayList<>();
-        int i = 0;
-        while (i < nums.length) {
-            int low = i;
-            i++;
-            while (i < nums.length && nums[i] == nums[i - 1] + 1) {
-                i++;
+        int start = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i - 1] + 1 < nums[i]) {
+                if (start == i - 1) {
+                    result.add(String.valueOf(nums[i - 1]));
+                } else {
+                    result.add(nums[start] + "->" + nums[i - 1]);
+                }
+                start = i;
             }
-            int high = i - 1;
-            StringBuilder sb = new StringBuilder(Integer.toString(nums[low]));
-            if (low < high) {
-                sb.append("->");
-                sb.append(nums[high]);
-            }
-            result.add(sb.toString());
+        }
+        if (start == nums.length - 1) {
+            result.add(String.valueOf(nums[nums.length - 1]));
+        } else if (nums.length > 0) {
+            result.add(nums[start] + "->" + nums[nums.length - 1]);
         }
         return result;
     }
