@@ -1,6 +1,6 @@
 package shuhuai.leetcode.problems.t141;
 
-class ListNode {
+public class ListNode {
     int val;
     ListNode next;
 
