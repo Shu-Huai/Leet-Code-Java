@@ -3,7 +3,6 @@ package shuhuai.leetcode.utils;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.ParameterizedType;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -86,11 +85,7 @@ public class TreeHelper<NodeType> {
     private NodeType getNode(Field field, NodeType node) throws IllegalAccessException {
         field.setAccessible(true);
         Object value = field.get(node);
-        if (value != null && field.getGenericType() instanceof ParameterizedType genericType
-                && genericType.getActualTypeArguments()[0].equals(clazz)) {
-            return clazz.cast(value);
-        }
-        return null;
+        return clazz.cast(value);
     }
 
     private NodeType getLeft(NodeType node) throws Exception {

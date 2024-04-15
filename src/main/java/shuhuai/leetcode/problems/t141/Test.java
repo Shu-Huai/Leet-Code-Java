@@ -1,5 +1,7 @@
 package shuhuai.leetcode.problems.t141;
 
+import shuhuai.leetcode.utils.ListHelper;
+
 import java.util.Scanner;
 
 public class Test {
@@ -8,14 +10,14 @@ public class Test {
         String input = sc.nextLine();
         while (!input.isEmpty()) {
             String[] split = input.split(" ");
-            int[] nums = new int[split.length];
-            for (int i = 0; i < split.length; i++) {
-                nums[i] = Integer.parseInt(split[i]);
+            ListNode head;
+            try {
+                head = new ListHelper<>(ListNode.class).build(split);
+            } catch (Exception e) {
+                continue;
             }
-            ListNode head = new ListNode(nums[0]);
             ListNode p = head;
-            for (int i = 1; i < nums.length; i++) {
-                p.next = new ListNode(nums[i]);
+            while (p != null && p.next != null) {
                 p = p.next;
             }
             int pos = sc.nextInt();
