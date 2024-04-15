@@ -1,4 +1,4 @@
-package shuhuai.leetcode.problems.t101;
+package shuhuai.leetcode.problems.t112;
 
 import shuhuai.leetcode.utils.TreeHelper;
 
@@ -16,7 +16,9 @@ public class Test {
             } catch (Exception e) {
                 continue;
             }
-            System.out.println(new Solution().isSymmetric(root));
+            int targetSum = sc.nextInt();
+            System.out.println(new Solution().hasPathSum(root, targetSum));
+            sc.nextLine();
             input = sc.nextLine();
         }
     }
