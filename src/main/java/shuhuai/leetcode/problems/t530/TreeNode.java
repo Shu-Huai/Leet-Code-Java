@@ -1,4 +1,4 @@
-package shuhuai.leetcode.problems.t108;
+package shuhuai.leetcode.problems.t530;
 
 @SuppressWarnings({"unused"})
 public class TreeNode {
