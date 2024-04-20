@@ -1,21 +1,16 @@
 package shuhuai.leetcode.problems.t9;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
 class Solution {
     public boolean isPalindrome(int x) {
-        List<Integer> list = new ArrayList<>();
-        while (x != 0) {
-            list.add(x % 10);
-            x /= 10;
+        if (x < 0) {
+            return false;
         }
-        for (int i = 0; i < list.size(); i++) {
-            if (!Objects.equals(list.get(i), list.get(list.size() - i - 1))) {
-                return false;
-            }
+        int sum = 0;
+        int temp = x;
+        while (temp != 0) {
+            sum = sum * 10 + (temp % 10);
+            temp /= 10;
         }
-        return true;
+        return sum == x;
     }
 }
