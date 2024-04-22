@@ -2,10 +2,10 @@ package shuhuai.leetcode.problems.t268;
 
 public class Solution {
     public int missingNumber(int[] nums) {
-        int sum = nums.length * (nums.length + 1) / 2;
-        for (int elem : nums) {
-            sum -= elem;
+        int sum = 0;
+        for (int item : nums) {
+            sum += item;
         }
-        return sum;
+        return nums.length * (nums.length + 1) / 2 - sum;
     }
 }
