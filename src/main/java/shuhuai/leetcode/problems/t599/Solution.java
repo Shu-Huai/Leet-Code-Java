@@ -13,7 +13,7 @@ public class Solution {
         }
         List<String> list = new ArrayList<>();
         int min = Integer.MAX_VALUE;
-        for (int i = 0; i < list2.length; i++) {
+        for (int i = 0; i < list2.length && i <= min; i++) {
             if (map.containsKey(list2[i]) && i + map.get(list2[i]) <= min) {
                 if (i + map.get(list2[i]) < min) {
                     list.clear();
