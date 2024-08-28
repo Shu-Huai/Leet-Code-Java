@@ -1,5 +1,6 @@
 package shuhuai.leetcode.problems.t83;
 
+@SuppressWarnings({"unused"})
 public class ListNode {
     int val;
     ListNode next;
