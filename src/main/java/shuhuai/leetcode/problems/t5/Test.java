@@ -9,6 +9,8 @@ public class Test {
         String input = scanner.nextLine();
         while (!input.isEmpty()) {
             System.out.println(new Solution().longestPalindromeDp(input));
+            System.out.println(new Solution().longsetPalindromeClever(input));
+            System.out.println(new Solution().longestPalindromeManacher(input));
             input = scanner.nextLine();
         }
     }
