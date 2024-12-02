@@ -9,7 +9,8 @@ public class Test {
         while (!input.isEmpty()) {
             int x = Integer.parseInt(input);
             Solution solution = new Solution();
-            System.out.println(solution.climbStairs(x));
+            System.out.println(solution.climbStairsStupid(x));
+            System.out.println(solution.climbStairsClever(x));
             input = sc.nextLine();
         }
     }
