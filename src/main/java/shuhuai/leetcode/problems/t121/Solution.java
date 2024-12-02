@@ -25,4 +25,15 @@ public class Solution {
         }
         return maxProfit;
     }
+
+    public int maxProfitDp(int[] prices) {
+        int[] dp = new int[prices.length];
+        dp[0] = 0;
+        int minPrice = prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            dp[i] = Math.max(dp[i - 1], prices[i] - minPrice);
+            minPrice = Math.min(minPrice, prices[i]);
+        }
+        return dp[prices.length - 1];
+    }
 }
