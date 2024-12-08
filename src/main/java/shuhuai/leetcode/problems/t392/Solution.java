@@ -2,21 +2,15 @@ package shuhuai.leetcode.problems.t392;
 
 public class Solution {
     public boolean isSubsequenceSimple(String s, String t) {
-        if (s.isEmpty()) {
-            return true;
-        }
         int i = 0;
         int j = 0;
-        while (j != t.length()) {
+        while (i < s.length() && j < t.length()) {
             if (s.charAt(i) == t.charAt(j)) {
                 i++;
-                if (i == s.length()) {
-                    return true;
-                }
             }
             j++;
         }
-        return false;
+        return i == s.length();
     }
 
     public boolean isSubsequenceDynamic(String s, String t) {

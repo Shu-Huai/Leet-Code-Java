@@ -30,18 +30,21 @@ public class Solution {
 
     public int majorityElementRandom(int[] nums) {
         Random random = new Random();
-        int count = 0;
-        int candidate = 0;
-        while (count <= nums.length / 2) {
-            count = 0;
-            candidate = nums[random.nextInt(nums.length)];
-            for (int num : nums) {
-                if (num == candidate) {
-                    count++;
+        int counter = 0;
+        while (counter < nums.length) {
+            int index = random.nextInt(nums.length);
+            int num = nums[index];
+            counter = 0;
+            for (int j : nums) {
+                if (j == num) {
+                    counter++;
                 }
             }
+            if (counter > nums.length / 2) {
+                return num;
+            }
         }
-        return candidate;
+        return 0;
     }
 
 
@@ -74,13 +77,13 @@ public class Solution {
 
     public int majorityElementClever(int[] nums) {
         int count = 0;
-        int candidate = 0;
+        int result = 0;
         for (int num : nums) {
             if (count == 0) {
-                candidate = num;
+                result = num;
             }
-            count += (num == candidate) ? 1 : -1;
+            count += (num == result) ? 1 : -1;
         }
-        return candidate;
+        return result;
     }
 }
