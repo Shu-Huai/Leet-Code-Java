@@ -9,4 +9,13 @@ public class Inputer {
         }
         return arr;
     }
+
+    public char[] stringToCharArray(String input) {
+        String[] str = input.split(" ");
+        char[] arr = new char[str.length];
+        for (int i = 0; i < str.length; i++) {
+            arr[i] = str[i].charAt(0);
+        }
+        return arr;
+    }
 }
