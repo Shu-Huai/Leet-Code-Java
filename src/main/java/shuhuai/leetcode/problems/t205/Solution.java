@@ -7,13 +7,17 @@ public class Solution {
     public boolean isIsomorphic(String s, String t) {
         Map<Character, Character> sToT = new HashMap<>();
         Map<Character, Character> tToS = new HashMap<>();
-        for (int i = 0; i < s.length(); ++i) {
-            char x = s.charAt(i), y = t.charAt(i);
-            if ((sToT.containsKey(x) && sToT.get(x) != y) || (tToS.containsKey(y) && tToS.get(y) != x)) {
+        for (int i = 0; i < s.length(); i++) {
+            char sChar = s.charAt(i);
+            char tChar = t.charAt(i);
+            if (sToT.containsKey(sChar) && sToT.get(sChar) != tChar) {
                 return false;
             }
-            sToT.put(x, y);
-            tToS.put(y, x);
+            if (tToS.containsKey(tChar) && tToS.get(tChar) != sChar) {
+                return false;
+            }
+            sToT.put(sChar, tChar);
+            tToS.put(tChar, sChar);
         }
         return true;
     }

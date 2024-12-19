@@ -1,8 +1,4 @@
-#### 383. 赎金信
-
-难度：简单
-
----
+# 383. 赎金信
 
 给你两个字符串：`ransomNote` 和 `magazine` ，判断 `ransomNote` 能不能由 `magazine` 里面的字符构成。
 
@@ -12,31 +8,23 @@
 
 **示例 1：**
 
-```
-输入：ransomNote = "a", magazine = "b"
-输出：false
-```
+> **输入：** ransomNote = "a", magazine = "b"
+>
+> **输出：** false
 
 **示例 2：**
 
-```
-输入：ransomNote = "aa", magazine = "ab"
-输出：false
-```
+> **输入：** ransomNote = "aa", magazine = "ab"
+>
+> **输出：** false
 
 **示例 3：**
 
-```
-输入：ransomNote = "aa", magazine = "aab"
-输出：true
-```
+> **输入：** ransomNote = "aa", magazine = "aab"
+>
+> **输出：** true
 
 **提示：**
 
-* `1 <= ransomNote.length, magazine.length <= 10^5`
-* `ransomNote` 和 `magazine` 由小写英文字母组成
-
----
-
-```Java
-```
+*   `1 <= ransomNote.length, magazine.length <= 10^5`
+*   `ransomNote` 和 `magazine` 由小写英文字母组成
