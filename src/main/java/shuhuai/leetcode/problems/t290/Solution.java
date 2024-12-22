@@ -5,26 +5,24 @@ import java.util.Map;
 
 public class Solution {
     public boolean wordPattern(String pattern, String s) {
-        Map<Character, String> patternToS = new HashMap<>();
-        Map<String, Character> sToPattern = new HashMap<>();
-        String[] list = s.split(" ");
-        if (list.length != pattern.length()) {
+        String[] split = s.split(" ");
+        if (pattern.length() != split.length) {
             return false;
         }
+        Map<Character, String> patternToS = new HashMap<>();
+        Map<String, Character> sToPattern = new HashMap<>();
         for (int i = 0; i < pattern.length(); i++) {
             if (patternToS.containsKey(pattern.charAt(i))) {
-                if (!list[i].equals(patternToS.get(pattern.charAt(i)))) {
+                if (!patternToS.get(pattern.charAt(i)).equals(split[i])) {
                     return false;
                 }
-            }
-            if (sToPattern.containsKey(list[i])) {
-                if (!sToPattern.get(list[i]).equals(pattern.charAt(i))) {
+            } else if (sToPattern.containsKey(split[i])) {
+                if (sToPattern.get(split[i]) != pattern.charAt(i)) {
                     return false;
                 }
-            }
-            if (!patternToS.containsKey(pattern.charAt(i)) && !sToPattern.containsKey(list[i])) {
-                patternToS.put(pattern.charAt(i), list[i]);
-                sToPattern.put(list[i], pattern.charAt(i));
+            } else {
+                patternToS.put(pattern.charAt(i), split[i]);
+                sToPattern.put(split[i], pattern.charAt(i));
             }
         }
         return true;
