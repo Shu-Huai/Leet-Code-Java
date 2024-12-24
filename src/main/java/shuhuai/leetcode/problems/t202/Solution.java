@@ -8,53 +8,53 @@ public class Solution {
     public boolean isHappySet(int n) {
         Set<Integer> set = new HashSet<>();
         while (n != 1) {
+            int sum = 0;
             int temp = n;
-            int result = 0;
             while (temp != 0) {
                 int digit = temp % 10;
-                result += digit * digit;
+                sum += digit * digit;
                 temp /= 10;
             }
-            if (set.contains(result)) {
+            if (set.contains(sum)) {
                 return false;
             }
-            set.add(result);
-            n = result;
+            set.add(sum);
+            n = sum;
         }
         return true;
     }
 
     public boolean isHappyLink(int n) {
-        int slowRunner = n;
-        int temp = n;
-        int fastRunner = 0;
-        while (temp != 0) {
-            int digit = temp % 10;
-            fastRunner += digit * digit;
-            temp /= 10;
-        }
-        while (fastRunner != 1) {
-            temp = slowRunner;
-            slowRunner = 0;
+        int fast = n;
+        int slow = n;
+        // 使用lambda表达式
+        do {
+            int sum = 0;
+            int temp = fast;
             while (temp != 0) {
                 int digit = temp % 10;
-                slowRunner += digit * digit;
+                sum += digit * digit;
                 temp /= 10;
             }
-            for (int i = 0; i < 2; i++) {
-                temp = fastRunner;
-                fastRunner = 0;
-                while (temp != 0) {
-                    int digit = temp % 10;
-                    fastRunner += digit * digit;
-                    temp /= 10;
-                }
+            fast = sum;
+            sum = 0;
+            temp = fast;
+            while (temp != 0) {
+                int digit = temp % 10;
+                sum += digit * digit;
+                temp /= 10;
             }
-            if (fastRunner == slowRunner) {
-                return false;
+            fast = sum;
+            temp = slow;
+            sum = 0;
+            while (temp != 0) {
+                int digit = temp % 10;
+                sum += digit * digit;
+                temp /= 10;
             }
-        }
-        return true;
+            slow = sum;
+        } while (slow != fast);
+        return slow == 1;
     }
 
     public boolean isHappyMath(int n) {
