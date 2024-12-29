@@ -8,6 +8,7 @@ public class Test {
         String input = scanner.nextLine();
         while (!input.isEmpty()) {
             String[] arr = input.split(" ");
+            System.out.println(new Solution().strStrGenius(arr[0], arr[1]));
             System.out.println(new Solution().strStrSimple(arr[0], arr[1]));
             System.out.println(new Solution().strStrKmp(arr[0], arr[1]));
             input = scanner.nextLine();

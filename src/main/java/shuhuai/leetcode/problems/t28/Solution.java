@@ -1,47 +1,55 @@
 package shuhuai.leetcode.problems.t28;
 
 public class Solution {
+    public int strStrGenius(String haystack, String needle) {
+        return haystack.indexOf(needle);
+    }
+
     public int strStrSimple(String haystack, String needle) {
-        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
-            boolean flag = true;
+        for (int i = 0; i < haystack.length(); i++) {
             for (int j = 0; j < needle.length(); j++) {
                 if (haystack.charAt(i + j) != needle.charAt(j)) {
-                    flag = false;
                     break;
                 }
-            }
-            if (flag) {
-                return i;
+                if (j == needle.length() - 1) {
+                    return i;
+                }
+                if (i + j == haystack.length() - 1) {
+                    return -1;
+                }
             }
         }
         return -1;
     }
 
     public int strStrKmp(String haystack, String needle) {
-        if (needle.isEmpty()) {
-            return 0;
-        }
-        int[] pi = new int[needle.length()];
-        for (int i = 1, j = 0; i < needle.length(); i++) {
-            while (j > 0 && needle.charAt(i) != needle.charAt(j)) {
-                j = pi[j - 1];
-            }
+        int[] p = new int[needle.length()];
+        int i = 0;
+        int j = 1;
+        while (j < needle.length()) {
             if (needle.charAt(i) == needle.charAt(j)) {
+                p[j] = i + 1;
+                i++;
                 j++;
+            } else if (i == 0) {
+                p[j] = 0;
+                j++;
+            } else {
+                i = p[i - 1];
             }
-            pi[i] = j;
         }
-        for (int i = 0, j = 0; i < haystack.length(); i++) {
-            while (j > 0 && haystack.charAt(i) != needle.charAt(j)) {
-                j = pi[j - 1];
-            }
+        i = 0;
+        j = 0;
+        while (i < haystack.length() && j < needle.length()) {
             if (haystack.charAt(i) == needle.charAt(j)) {
+                i++;
                 j++;
-            }
-            if (j == needle.length()) {
-                return i - needle.length() + 1;
+            } else if (j == 0) {
+                i++;
+            } else {
+                j = p[j - 1];
             }
         }
-        return -1;
+        return j == needle.length() ? i - j : -1;
     }
 }
