@@ -13,23 +13,21 @@ public class Solution {
         map.put('C', 100);
         map.put('D', 500);
         map.put('M', 1000);
-        int result = 0;
+        int sum = 0;
         for (int i = 0; i < s.length(); i++) {
-            if (i == s.length() - 1) {
-                result += map.get(s.charAt(i));
-            } else if (s.charAt(i) == 'I' && (s.charAt(i + 1) == 'V' || s.charAt(i + 1) == 'X')) {
-                result += (map.get(s.charAt(i + 1)) - 1);
-                i++;
-            } else if (s.charAt(i) == 'X' && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) {
-                result += (map.get(s.charAt(i + 1)) - 10);
-                i++;
-            } else if (s.charAt(i) == 'C' && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) {
-                result += (map.get(s.charAt(i + 1)) - 100);
-                i++;
+            char cur = s.charAt(i);
+            if (i < s.length() - 1) {
+                char next = s.charAt(i + 1);
+                if (cur == 'I' && (next == 'V' || next == 'X') || cur == 'X' && (next == 'L' || next == 'C')
+                        || cur == 'C' && (next == 'D' || next == 'M')) {
+                    sum -= map.get(cur);
+                } else {
+                    sum += map.get(cur);
+                }
             } else {
-                result += map.get(s.charAt(i));
+                sum += map.get(cur);
             }
         }
-        return result;
+        return sum;
     }
 }
