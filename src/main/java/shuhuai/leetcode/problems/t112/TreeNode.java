@@ -1,5 +1,6 @@
 package shuhuai.leetcode.problems.t112;
 
+@SuppressWarnings("unused")
 public class TreeNode {
     int val;
     TreeNode left;

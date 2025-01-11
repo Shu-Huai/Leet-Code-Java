@@ -8,9 +8,6 @@ public class Solution {
         if (root.val == targetSum && root.left == null && root.right == null) {
             return true;
         }
-        if (root.left == null && root.right == null) {
-            return false;
-        }
-        return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
+        return this.hasPathSum(root.left, targetSum - root.val) || this.hasPathSum(root.right, targetSum - root.val);
     }
 }
