@@ -36,6 +36,6 @@
 
 **提示：**
 
-*   `1 <= digits.length <= 100`
-*   `0 <= digits[i] <= 9`
+* `1 <= digits.length <= 100`
+* `0 <= digits[i] <= 9`
 

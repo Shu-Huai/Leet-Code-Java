@@ -1,8 +1,8 @@
 package shuhuai.leetcode.problems.t740;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Solution {
     public int deleteAndEarn(int[] nums) {

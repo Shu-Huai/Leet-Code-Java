@@ -1,6 +1,7 @@
 # 56. 合并区间
 
-以数组 `intervals` 表示若干个区间的集合，其中单个区间为 `intervals[i] = [start_i, end_i]` 。请你合并所有重叠的区间，并返回 _一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间_ 。
+以数组 `intervals` 表示若干个区间的集合，其中单个区间为 `intervals[i] = [start_i, end_i]` 。请你合并所有重叠的区间，并返回
+_一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间_ 。
 
 **示例 1：**
 
@@ -20,6 +21,6 @@
 
 **提示：**
 
-*   `1 <= intervals.length <= 10^4`
-*   `intervals[i].length == 2`
-*   `0 <= start_i <= end_i <= 10^4`
+* `1 <= intervals.length <= 10^4`
+* `intervals[i].length == 2`
+* `0 <= start_i <= end_i <= 10^4`

@@ -13,7 +13,7 @@ public class Solution {
                 tempA /= 10;
                 countA++;
             }
-            if (a == 0){
+            if (a == 0) {
                 countA = 1;
             }
             int countB = 0;
@@ -21,10 +21,10 @@ public class Solution {
                 tempB /= 10;
                 countB++;
             }
-            if (b == 0){
+            if (b == 0) {
                 countB = 1;
             }
-            return (int) ((a *  Math.pow(10, countB) + b) - (b *  Math.pow(10, countA) + a));
+            return (int) ((a * Math.pow(10, countB) + b) - (b * Math.pow(10, countA) + a));
         });
         if (numsI[0] == 0) {
             return "0";

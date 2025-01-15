@@ -20,9 +20,9 @@
 
 **提示：**
 
-*   `1 <= strs.length <= 200`
-*   `0 <= strs[i].length <= 200`
-*   `strs[i]` 仅由小写英文字母组成
+* `1 <= strs.length <= 200`
+* `0 <= strs[i].length <= 200`
+* `strs[i]` 仅由小写英文字母组成
 
 ## 代码
 

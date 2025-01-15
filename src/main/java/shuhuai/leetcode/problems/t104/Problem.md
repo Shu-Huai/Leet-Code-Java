@@ -6,7 +6,7 @@
 
 **示例 1：**
 
-![](Z:\Public\images\tmp-tree.jpg)
+![](http://public.file.lvshuhuai.cn/images\tmp-tree.jpg)
 
 > **输入：** root = \[3,9,20,null,null,15,7]
 >
@@ -20,5 +20,5 @@
 
 **提示：**
 
-*   树中节点的数量在 `[0, 10^4]` 区间内。
-*   `-100 <= Node.val <= 100`
+* 树中节点的数量在 `[0, 10^4]` 区间内。
+* `-100 <= Node.val <= 100`

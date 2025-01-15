@@ -30,7 +30,7 @@ public class Solution {
     }
 
     public void rotateClever(int[] nums, int k) {
-        int start =0;
+        int start = 0;
         k = k % nums.length;
         int count = 0;
         while (count < nums.length) {
@@ -42,7 +42,7 @@ public class Solution {
                 nums[index] = pre;
                 pre = temp;
                 count++;
-            } while (index!= start);
+            } while (index != start);
             start++;
         }
     }

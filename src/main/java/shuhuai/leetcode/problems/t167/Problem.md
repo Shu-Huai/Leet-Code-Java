@@ -1,6 +1,8 @@
 # 167. 两数之和 II
 
-给你一个下标从 **1**  开始的整数数组 `numbers` ，该数组已按 **非递减顺序排列**   ，请你从数组中找出满足相加之和等于目标数 `target` 的两个数。如果设这两个数分别是 `numbers[index_1]` 和 `numbers[index_2]` ，则 `1 <= index_1 < index_2 <= numbers.length` 。
+给你一个下标从 **1**  开始的整数数组 `numbers` ，该数组已按 **非递减顺序排列**   ，请你从数组中找出满足相加之和等于目标数
+`target` 的两个数。如果设这两个数分别是 `numbers[index_1]` 和 `numbers[index_2]` ，则
+`1 <= index_1 < index_2 <= numbers.length` 。
 
 以长度为 2 的整数数组 `[index_1, index_2]` 的形式返回这两个整数的下标 `index_1` 和 `index_2`。
 
@@ -34,9 +36,9 @@
 
 **提示：**
 
-*   `2 <= numbers.length <= 3 * 10^4`
-*   `-1000 <= numbers[i] <= 1000`
-*   `numbers` 按 **非递减顺序**  排列
-*   `-1000 <= target <= 1000`
-*   **仅存在一个有效答案**
+* `2 <= numbers.length <= 3 * 10^4`
+* `-1000 <= numbers[i] <= 1000`
+* `numbers` 按 **非递减顺序**  排列
+* `-1000 <= target <= 1000`
+* **仅存在一个有效答案**
 

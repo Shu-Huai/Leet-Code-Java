@@ -27,21 +27,21 @@ public class Solution {
 
     public Node copyRandomListClever(Node head) {
         Node p = head;
-        while (p!= null) {
+        while (p != null) {
             Node q = new Node(p.val);
             q.next = p.next;
             p.next = q;
             p = q.next;
         }
         p = head;
-        while (p!= null) {
-            p.next.random = p.random!= null? p.random.next : null;
-            p=p.next.next;
+        while (p != null) {
+            p.next.random = p.random != null ? p.random.next : null;
+            p = p.next.next;
         }
         p = head;
         Node result = new Node(0);
         Node q = result;
-        while (p!= null) {
+        while (p != null) {
             q.next = p.next;
             q = q.next;
             p.next = p.next.next;

@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Test {
-    public void test(){
+    public void test() {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        while (!input.isEmpty()){
+        while (!input.isEmpty()) {
             List<char[]> list = new ArrayList<>();
             while (!input.isEmpty()) {
                 list.add(new Inputer().stringToCharArray(input));

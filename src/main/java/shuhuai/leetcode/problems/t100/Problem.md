@@ -6,7 +6,7 @@
 
 **示例 1：**
 
-![](Z:\Public\images\ex1.jpg)
+![](http://public.file.lvshuhuai.cn/images\ex1.jpg)
 
 > **输入：** p = \[1,2,3], q = \[1,2,3]
 >
@@ -14,7 +14,7 @@
 
 **示例 2：**
 
-![](Z:\Public\images\ex2.jpg)
+![](http://public.file.lvshuhuai.cn/images\ex2.jpg)
 
 > **输入：** p = \[1,2], q = \[1,null,2]
 >
@@ -22,7 +22,7 @@
 
 **示例 3：**
 
-![](Z:\Public\images\ex3.jpg)
+![](http://public.file.lvshuhuai.cn/images\ex3.jpg)
 
 > **输入：** p = \[1,2,1], q = \[1,1,2]
 >
@@ -30,5 +30,5 @@
 
 **提示：**
 
-*   两棵树上的节点数目都在范围 `[0, 100]` 内
-*   `-10^4 <= Node.val <= 10^4`
+* 两棵树上的节点数目都在范围 `[0, 100]` 内
+* `-10^4 <= Node.val <= 10^4`

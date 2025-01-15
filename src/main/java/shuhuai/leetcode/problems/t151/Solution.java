@@ -5,7 +5,7 @@ public class Solution {
         String[] words = s.strip().split(" ");
         StringBuilder sb = new StringBuilder();
         for (int i = words.length - 1; i >= 0; i--) {
-            if (words[i].isBlank()){
+            if (words[i].isBlank()) {
                 continue;
             }
             sb.append(words[i]).append(" ");

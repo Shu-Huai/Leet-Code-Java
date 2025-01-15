@@ -22,7 +22,7 @@ public class Solution {
                     }
                     break;
                 case 1:
-                    if (i + 1 < matrix.length && matrix[i + 1][j]!= Integer.MIN_VALUE) {
+                    if (i + 1 < matrix.length && matrix[i + 1][j] != Integer.MIN_VALUE) {
                         i++;
                     } else {
                         direction = 2;
@@ -30,7 +30,7 @@ public class Solution {
                     }
                     break;
                 case 2:
-                    if (j - 1 >= 0 && matrix[i][j - 1]!= Integer.MIN_VALUE) {
+                    if (j - 1 >= 0 && matrix[i][j - 1] != Integer.MIN_VALUE) {
                         j--;
                     } else {
                         direction = 3;
@@ -38,7 +38,7 @@ public class Solution {
                     }
                     break;
                 case 3:
-                    if (i - 1 >= 0 && matrix[i - 1][j]!= Integer.MIN_VALUE) {
+                    if (i - 1 >= 0 && matrix[i - 1][j] != Integer.MIN_VALUE) {
                         i--;
                     } else {
                         direction = 0;

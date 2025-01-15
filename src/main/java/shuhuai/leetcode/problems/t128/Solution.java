@@ -27,9 +27,9 @@ public class Solution {
         Set<Integer> set = Arrays.stream(nums).boxed().collect(Collectors.toSet());
         int max = 0;
         for (int num : set) {
-            if (!set.contains(num - 1)){
+            if (!set.contains(num - 1)) {
                 int cur = 1;
-                while (set.contains(num + 1)){
+                while (set.contains(num + 1)) {
                     num++;
                     cur++;
                 }

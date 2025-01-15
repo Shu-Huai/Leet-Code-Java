@@ -10,7 +10,7 @@ public class Test {
     public void test() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        while (!input.isEmpty()){
+        while (!input.isEmpty()) {
             List<char[]> list = new ArrayList<>();
             while (!input.isEmpty()) {
                 list.add(new Inputer().stringToCharArray(input));

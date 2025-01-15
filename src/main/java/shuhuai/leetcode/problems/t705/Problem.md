@@ -15,7 +15,7 @@
 > **输入：**
 > ["MyHashSet", "add", "add", "contains", "contains", "add", "contains", "remove", "contains"]
 > [[], [1], [2], [1], [3], [2], [2], [2], [2]]
-> 
+>
 > **输出：**
 > [null, null, null, true, false, null, true, null, false]
 >

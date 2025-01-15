@@ -24,16 +24,6 @@ public class Solution {
         return max;
     }
 
-    private static class Status {
-        public int lSum, rSum, mSum, iSum;
-        public Status(int lSum, int rSum, int mSum, int iSum) {
-            this.lSum = lSum;
-            this.rSum = rSum;
-            this.mSum = mSum;
-            this.iSum = iSum;
-        }
-    }
-
     public int maxSubArrayDivide(int[] nums) {
         return divide(nums, 0, nums.length - 1).mSum;
     }
@@ -50,5 +40,16 @@ public class Solution {
         int mSum = Math.max(Math.max(lStatus.mSum, rStatus.mSum), lStatus.rSum + rStatus.lSum);
         int iSum = lStatus.iSum + rStatus.iSum;
         return new Status(lSum, rSum, mSum, iSum);
+    }
+
+    private static class Status {
+        public int lSum, rSum, mSum, iSum;
+
+        public Status(int lSum, int rSum, int mSum, int iSum) {
+            this.lSum = lSum;
+            this.rSum = rSum;
+            this.mSum = mSum;
+            this.iSum = iSum;
+        }
     }
 }

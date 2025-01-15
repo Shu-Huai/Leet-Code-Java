@@ -10,7 +10,7 @@ public class Test {
     public void test() {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        while (!input.isEmpty()){
+        while (!input.isEmpty()) {
             int[] nums = new Inputer().stringToIntArray(input);
             int target = Integer.parseInt(scanner.nextLine());
             int[] result = new Solution().twoSum(nums, target);

@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Test {
-    public void test(){
+    public void test() {
         Scanner scanner = new Scanner(System.in);
-        String input= scanner.nextLine();
-        while (!input.isEmpty()){
+        String input = scanner.nextLine();
+        while (!input.isEmpty()) {
             List<int[]> list = new ArrayList<>();
             while (!input.isEmpty()) {
                 String[] split = input.split(" ");

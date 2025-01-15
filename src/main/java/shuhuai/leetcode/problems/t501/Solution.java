@@ -11,7 +11,7 @@ public class Solution {
     public int[] findMode(TreeNode root) {
         Map<Integer, Integer> map = new HashMap<>();
         List<Integer> list = new ArrayList<>();
-        findMode(root, map,list);
+        findMode(root, map, list);
         return list.stream().mapToInt(i -> i).toArray();
     }
 

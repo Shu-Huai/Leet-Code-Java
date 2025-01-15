@@ -3,7 +3,7 @@ package shuhuai.leetcode.problems.t1137;
 public class Solution {
     public int tribonacci(int n) {
         if (n < 3) {
-            return n == 0? 0 : 1;
+            return n == 0 ? 0 : 1;
         }
         int[] dp = new int[n + 1];
         dp[0] = 0;
@@ -17,7 +17,7 @@ public class Solution {
 
     public int tribonacciClever(int n) {
         if (n < 3) {
-            return n == 0? 0 : 1;
+            return n == 0 ? 0 : 1;
         }
         int a = 0;
         int b = 1;

@@ -30,8 +30,8 @@
 
 **提示：**
 
-*   `1 <= s.length <= 300`
-*   `1 <= wordDict.length <= 1000`
-*   `1 <= wordDict[i].length <= 20`
-*   `s` 和 `wordDict[i]` 仅由小写英文字母组成
-*   `wordDict` 中的所有字符串 **互不相同**
+* `1 <= s.length <= 300`
+* `1 <= wordDict.length <= 1000`
+* `1 <= wordDict[i].length <= 20`
+* `s` 和 `wordDict[i]` 仅由小写英文字母组成
+* `wordDict` 中的所有字符串 **互不相同**

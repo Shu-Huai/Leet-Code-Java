@@ -16,10 +16,12 @@
 
 **提示：**
 
-*   `1 <= s.length <= 10^4`
-*   `s` 由小写英文字母组成
+* `1 <= s.length <= 10^4`
+* `s` 由小写英文字母组成
 
-**注意：** 该题与 1081 [https://leetcode\-cn\.com/problems/smallest\-subsequence\-of\-distinct\-characters](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters) 相同
+**注意：** 该题与
+1081 [https://leetcode\-cn\.com/problems/smallest\-subsequence\-of\-distinct\-characters](https://leetcode-cn.com/problems/smallest-subsequence-of-distinct-characters)
+相同
 
 ## 代码
 
