@@ -16,9 +16,20 @@ public class Main {
         String input = scanner.nextLine();
         while (!input.isEmpty()) {
             try {
-                Class<?> clazz = Class.forName("shuhuai.leetcode.problems." + input + ".Test");
+                if (!input.startsWith("t")) {
+                    System.out.println("输入有误");
+                    System.out.println("请输入题号：");
+                    input = scanner.nextLine();
+                    continue;
+                }
+                int subGroupFactor = 2;
+                int t = Integer.parseInt(input.substring(1));
+                int groupSize = (int) Math.pow(10, subGroupFactor);
+                int subGroup = t / groupSize * groupSize;
+                String group = "t" + subGroup;
+                Class<?> clazz = Class.forName("shuhuai.leetcode.problems." + group + "." + input + ".Test");
                 String[] pathes = new String[]{System.getProperty("user.dir"), "src", "main", "java", "shuhuai",
-                        "leetcode", "problems", input, "Problem.md"};
+                        "leetcode", "problems", group, input, "Problem.md"};
                 String fileName = String.join(File.separator, pathes);
                 BufferedReader br = new BufferedReader(new FileReader(fileName));
                 String line;
